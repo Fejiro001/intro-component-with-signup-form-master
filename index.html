@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An intro component with a sign up form for the Frontend Mentor challenge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An intro component with a sign up form for the Frontend Mentor challenge"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link
+      rel="preload"
+      href="./assets/images/bg-intro-desktop.webp"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="./assets/images/bg-intro-mobile.webp"
+      as="image"
+      media="(min-width:375px)"
+    />
 
-  <link rel="stylesheet" href="./src/style.css">
-  
-  <title>Intro component with sign up form</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  Learn to code by watching others
+    <link rel="stylesheet" href="./src/style.css" />
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+    <title>Intro component with sign up form</title>
+  </head>
+  <body>
 
-  Try it free 7 days then $20/mo. thereafter
+    <main>
+      <section>
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+      
+      <div>
+        <button><span>Try it free 7 days</span> then $20/mo. thereafter</button>
+        <form action="">
+          <input type="text" placeholder="First Name" name="" id="" />
+          <input type="text" placeholder="Last Name" name="" id="" />
+          <input type="email" placeholder="Email Address" name="" id="" />
+          <input type="password" placeholder="Password" name="" id="" />
+          <input type="button" value="Claim your free trial" />
+          <p>
+            By clicking the button, you are agreeing to our
+            <a href="">Terms and Services</a>
+          </p>
+        </form>
+      </div>
+    </main>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Fejiro Abere</a>.
+      </p>
+    </footer>
 
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Fejiro Abere</a>.
-    </p>
-  </footer>
-
-  <script src="./src/script.js"></script>
-</body>
+    <script src="./src/script.js"></script>
+  </body>
 </html>
