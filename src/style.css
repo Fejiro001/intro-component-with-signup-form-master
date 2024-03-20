@@ -149,7 +149,18 @@ input::placeholder {
   color: hsl(246, 25%, 77%);
 }
 
-.terms-conditions a {
+a {
   color: hsl(0, 100%, 74%);
   font-weight: 700;
+}
+
+.attribution {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  background-color: white;
 }
