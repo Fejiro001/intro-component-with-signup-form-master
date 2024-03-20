@@ -1,14 +1,155 @@
 @import "reset.css";
-/* ### Primary
 
-- Red: hsl(0, 100%, 74%) 
-- Green: hsl(154, 59%, 51%)
+:root {
+  --small-devices: "375px";
+  --big-devices: "1440px";
+  --font-big: clamp(1.2rem, 2vw, 3rem);
+  --font-medium: clamp(1.2rem, 2vw, 3rem);
+  --font-big: clamp(1.2rem, 2vw, 3rem);
+  --radius: 5px;
+  --big-radius: 10px;
+  --box-shadow: 0 8px hsla(249, 10%, 26%, 0.2);
+}
 
-### Accent
+@font-face {
+  font-family: Poppins;
+  src: url(../assets/fonts/Poppins-Regular.ttf);
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../assets/fonts/Poppins-Medium.ttf);
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../assets/fonts/Poppins-SemiBold.ttf);
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../assets/fonts/Poppins-Bold.ttf);
+  font-display: swap;
+  font-weight: 700;
+}
 
-- Blue: hsl(248, 32%, 49%)
+body {
+  min-height: 100dvh;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(../assets/images/bg-intro-mobile.webp);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  padding-inline: 1.5rem;
+  padding-block: 5.8rem;
+}
 
-### Neutral
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
 
-- Dark Blue: hsl(249, 10%, 26%) 
-- Grayish Blue: hsl(246, 25%, 77%) */
+@media (min-width: 820px) {
+  body {
+    background-image: url(../assets/images/bg-intro-desktop.webp);
+  }
+  main {
+    flex-direction: row;
+  }
+}
+
+section {
+  text-align: center;
+  color: white;
+  display: grid;
+  gap: 1.5rem;
+}
+
+section h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+
+section p {
+  font-size: 1rem;
+}
+
+.form-section {
+  display: grid;
+  gap: 1.6rem;
+  max-width: 24rem;
+}
+
+.btn {
+  width: 100%;
+  color: white;
+  border: none;
+}
+
+.btn--try {
+  background-color: hsl(248, 32%, 49%);
+  text-wrap: balance;
+  font-weight: 400;
+  font-size: 0.95rem;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--big-radius);
+  padding: 1.3rem;
+}
+
+.btn--try span {
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  border-radius: var(--big-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+input {
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius);
+  border: 1px solid hsl(246, 25%, 77%);
+  width: 100%;
+}
+
+input::placeholder {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn--claim {
+  background-color: hsl(154, 59%, 51%);
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-weight: 500;
+  box-shadow: 0 -5px hsl(154, 59%, 40%) inset;
+}
+
+.terms-conditions {
+  text-align: center;
+  padding-inline: 1rem;
+  text-wrap: pretty;
+  font-size: 0.7rem;
+  line-height: 1.4em;
+  color: hsl(246, 25%, 77%);
+}
+
+.terms-conditions a {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
