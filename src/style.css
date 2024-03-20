@@ -3,7 +3,7 @@
 :root {
   --small-devices: "375px";
   --big-devices: "1440px";
-  --font-big: clamp(1.2rem, 2vw, 3rem);
+  --font-big: clamp(1.7rem, 4vw, 4rem);
   --font-medium: clamp(1.2rem, 2vw, 3rem);
   --font-big: clamp(1.2rem, 2vw, 3rem);
   --radius: 5px;
@@ -37,6 +37,7 @@
 }
 
 body {
+  position: relative;
   min-height: 100dvh;
   background-color: hsl(0, 100%, 74%);
   background-image: url(../assets/images/bg-intro-mobile.webp);
@@ -57,15 +58,6 @@ main {
   gap: 4rem;
 }
 
-@media (min-width: 820px) {
-  body {
-    background-image: url(../assets/images/bg-intro-desktop.webp);
-  }
-  main {
-    flex-direction: row;
-  }
-}
-
 section {
   text-align: center;
   color: white;
@@ -74,13 +66,13 @@ section {
 }
 
 section h1 {
-  font-size: 1.7rem;
+  font-size: clamp(1.7rem, 3.4vw, 3rem);
   font-weight: 600;
   line-height: 1.3em;
 }
 
 section p {
-  font-size: 1rem;
+  font-size: clamp(1rem, 1vw, 3rem);
 }
 
 .form-section {
@@ -99,7 +91,7 @@ section p {
   background-color: hsl(248, 32%, 49%);
   text-wrap: balance;
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 1vw, 2rem);
   box-shadow: var(--box-shadow);
   border-radius: var(--big-radius);
   padding: 1.3rem;
@@ -128,7 +120,7 @@ input {
 
 input::placeholder {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 1vw, 2rem);
 }
 
 .btn--claim {
@@ -137,6 +129,7 @@ input::placeholder {
   border-radius: var(--radius);
   padding: 1rem;
   font-weight: 500;
+  font-size: clamp(1rem, 1.2vw, 2rem);
   box-shadow: 0 -5px hsl(154, 59%, 40%) inset;
 }
 
@@ -144,7 +137,7 @@ input::placeholder {
   text-align: center;
   padding-inline: 1rem;
   text-wrap: pretty;
-  font-size: 0.7rem;
+  font-size: clamp(0.7rem, 0.5vw, 2rem);
   line-height: 1.4em;
   color: hsl(246, 25%, 77%);
 }
@@ -158,9 +151,36 @@ a {
   text-align: center;
   color: white;
   font-weight: 600;
-  margin-top: 1rem;
+  position: absolute;
+  inset: 0;
+  margin-top: .5rem;
 }
 
 .attribution a {
   background-color: white;
+}
+
+@media (min-width: 900px) {
+  body {
+    background-image: url(../assets/images/bg-intro-desktop.webp);
+    padding-inline: 3rem;
+  }
+  main {
+    flex-direction: row;
+    max-width: 69rem;
+  }
+  section {
+    text-align: left;
+    max-width: 32rem;
+  }
+  .form-section {
+    min-width: 33.5rem;
+  }
+  form {
+    gap: 1.3rem;
+    padding: 2.4rem;
+  }
+  input {
+    padding-inline-start: 1.8rem;
+  }
 }
