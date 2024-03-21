@@ -79,7 +79,7 @@
           <div class="input-container">
             <div class="input-error">
               <input
-                id="first-name"
+                class="input"
                 type="text"
                 placeholder="First Name"
                 name="first-name"
@@ -100,7 +100,7 @@
           <div class="input-container">
             <div class="input-error">
               <input
-                id="last-name"
+                class="input"
                 type="text"
                 placeholder="Last Name"
                 name="last-name"
@@ -121,11 +121,11 @@
           <div class="input-container">
             <div class="input-error">
               <input
-                id="email"
+                class="input"
                 type="email"
                 placeholder="Email Address"
                 name="email"
-                pattern=""
+                pattern="[a-zA-Z0-9.#_%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                 required
                 autocomplete="email"
               />
@@ -136,18 +136,18 @@
               />
             </div>
             <span id="email--error" class="error-message"
-              >Looks like this is not an email</span
+              >Email cannot be empty</span
             >
           </div>
 
           <div class="input-container">
             <div class="input-error">
               <input
-                id="password"
+                class="input"
                 type="password"
                 placeholder="Password"
                 name="password"
-                minlength="8"
+                pattern="[a-zA-Z0-9.#_$!@&]{8,}"
                 required
                 autocomplete="current-password"
               />
