@@ -162,7 +162,6 @@ form {
   }
 }
 
-
 .btn-claim {
   width: 100%;
   color: white;
@@ -182,7 +181,7 @@ form {
   outline: none;
 }
 
-.btn-claim:active{
+.btn-claim:active {
   opacity: 0.7;
   outline: none;
   transform: translateY(4px);

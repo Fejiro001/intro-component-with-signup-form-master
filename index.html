@@ -79,6 +79,7 @@
           <div class="input-container">
             <div class="input-error">
               <input
+                title="Please enter your first name"
                 data-name="First Name"
                 class="input"
                 type="text"
@@ -93,7 +94,11 @@
               />
             </div>
 
-            <span id="first-name--error" class="error-message"
+            <span
+              id="first-name--error"
+              class="error-message"
+              role="alert"
+              aria-live="assertive"
               >First Name cannot be empty</span
             >
           </div>
@@ -101,6 +106,7 @@
           <div class="input-container">
             <div class="input-error">
               <input
+                title="Please enter your last name"
                 data-name="Last Name"
                 class="input"
                 type="text"
@@ -115,7 +121,11 @@
               />
             </div>
 
-            <span id="last-name--error" class="error-message"
+            <span
+              id="last-name--error"
+              class="error-message"
+              role="alert"
+              aria-live="assertive"
               >Last Name cannot be empty</span
             >
           </div>
@@ -126,9 +136,10 @@
                 data-name="Email"
                 class="input"
                 type="email"
+                title="Please enter a valid email address"
                 placeholder="Email Address"
                 name="email"
-                pattern="[a-zA-Z0-9.#_%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                pattern="[a-zA-Z0-9.#_%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                 required
                 autocomplete="email"
               />
@@ -138,7 +149,11 @@
                 alt=""
               />
             </div>
-            <span id="email--error" class="error-message"
+            <span
+              id="email--error"
+              class="error-message"
+              role="alert"
+              aria-live="assertive"
               >Email cannot be empty</span
             >
           </div>
@@ -150,8 +165,9 @@
                 class="input"
                 type="password"
                 placeholder="Password"
+                title="Must contain at least one digit, one lowercase letter, one uppercase letter, one special character, and be between 8 and 15 characters long."
                 name="password"
-                pattern="[a-zA-Z0-9.#_$!@&]{8,}"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}"
                 required
                 autocomplete="current-password"
               />
@@ -162,7 +178,11 @@
               />
             </div>
 
-            <span id="password--error" class="error-message"
+            <span
+              id="password--error"
+              class="error-message"
+              role="alert"
+              aria-live="assertive"
               >Password cannot be empty</span
             >
           </div>
