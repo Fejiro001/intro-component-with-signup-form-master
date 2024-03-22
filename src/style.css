@@ -101,6 +101,7 @@ form {
   border-radius: var(--big-radius);
   padding: 1.5rem;
   box-shadow: var(--box-shadow);
+  min-height: 439.469px;
 }
 
 .input-error {
@@ -236,6 +237,7 @@ a {
   form {
     gap: 1.3rem;
     padding: 2.4rem;
+    min-height: 476.562px;
   }
   .input {
     padding-inline-start: 1.8rem;
